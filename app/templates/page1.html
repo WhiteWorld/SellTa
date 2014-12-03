@@ -1,0 +1,26 @@
+﻿{% extends 'include/base.html' %}
+{% block body %}
+	<body id="page1" class="bg-color-female">
+		<div class="row col-xs-9 col-xs-offset-2">
+			<div class="text-left top-offset-4">
+				<span class="white-font">Ta是你的？</span>
+			</div>
+			<form id="sexForm" method="post">
+				<div class="text-left">
+					<p>
+						<input type="radio" class="styled blue-radio" name="sex" id="sexFemale" value="1" checked/>
+						<label for="sexFemale" class="radio-label white-font">闺蜜</label>
+					</p>
+					<p>
+						<input type="radio" class="styled blue-radio" name="sex" id="sexMale" value="0" />
+						<label for="sexMale" class="radio-label white-font">基友</label>
+					</p>
+				</div>
+				<div class="row text-center top-offset-5 col-xs-4" >
+					<input type="submit" class="cycle-button mywhite" style="color:#FF0088" id="sexButton" value="    确   定    "/>
+				</div>
+			</form>
+		</div>
+		<div class="text-center" id="footer">1 / 5</div>
+	</body>
+{% endblock %}

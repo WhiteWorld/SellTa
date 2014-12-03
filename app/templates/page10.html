@@ -1,0 +1,63 @@
+﻿{% extends 'include/base.html' %}
+{% block body %}
+	<body id="sharePage" class="bg-end" onload="shareToWechat(true)">		
+		<div  class="col-xs-offset-1" id="sharedContent" style="position:absolute;">
+			<form id="SaleWordForm" method="post" class="text-center">
+				<div class="text-center">
+					{% if user.sex == False %}
+					<div>
+						<input type="text" class="hide" id="sex" name="sex" value="基友" />
+						<span class="blue-font">号外号外！<br/></span>
+						<span class="blue-font">甩卖单身</span>
+						<span class="blue-font">
+								{% if user.character==1 %}温柔暖男
+								{% elif user.character==2 %}成熟大叔
+								{% elif user.character==3 %}清纯正太
+								{% elif user.character==4 %}迷一般的男子
+								{% endif %}
+						</span>
+						<br/>
+						<span class="blue-font">"{{ user.nickname }}"一枚<br/></span>
+						<span class="blue-font">甩卖词甩卖词：</span><br/>
+						<span class="blue-font" style="font-size:120%">{{ user.words }}<br/></span>
+					</div>
+					<div  style="margin-top:20px">
+						<span class="blue-font" style="font-size:120%;">心动不如心动，赶紧加他的微信号：</span>
+					</div>
+					{% else %}
+					<div>
+						<input type="text" class="hide" id="sex" name="sex" value="闺蜜" />
+						<span  class="pink-font">号外号外！</span><br/>
+						<span  class="pink-font">甩卖单身</span>
+						<span  class="pink-font">
+							{% if user.character==5 %}温柔御姐
+							{% elif user.character==6 %}霸气女王
+							{% elif user.character==7 %}可爱萝莉
+							{% elif user.character==8 %}迷一般的女子
+							{% endif %}
+							<br/>
+						</span>
+						<span  class="pink-font">"{{ user.nickname }}"一枚</span><br/>
+						<span  class="pink-font">甩卖词甩卖词<br/></span>
+						<span  class="pink-font" style="font-size:120%">{{ user.words }}<br/></span>
+					</div>
+					<div>
+						<span class="pink-font" style="font-size:120%;">心动不如心动，赶紧加她的微信号：<br/></span>
+					</div>
+					{% endif %}
+					<span class="highlight pink-font text-center" style="font-size:120%;color:black;">{{ user.wechat }}</span>
+				</div>
+			</form>
+			<div  class="text-center black-font top-offset-2">
+				<span>订阅号：</span>
+				<a href="http://mp.weixin.qq.com/s?__biz=MzA4MjkzODEwNQ==&mid=201090998&idx=1&sn=05a465d7cb223457801151546949a0f1#rd" >理工男Attraction</a>
+			</div>
+		</div>
+				
+		<div class="fullScreen" id="shareGuide" onclick="shareGuideClicked()">
+			<img alt="ShareTip1" src="/static/image/share1.png" width="100%"/>
+			<img alt="ShareTip2" src="/static/image/share2.png" width="100%" />
+		</div>
+
+	</body>
+{% endblock %}

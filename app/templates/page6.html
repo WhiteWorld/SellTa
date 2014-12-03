@@ -1,0 +1,35 @@
+﻿{% extends 'include/base.html' %}
+{% block body %}
+	<body class="bg-color-female" id="page6">
+		<div class="col-xs-9 col-xs-offset-2">
+			<form id="femaleNatureForm" method="post">
+				<div  class="text-left top-offset-3">
+					<span class="white-font">她是：</span>
+				</div>
+				<div class="text-left">
+					<p>
+						<input type="radio" class="styled red-radio" name="character" id="nature1" value="5" checked />
+						<label for="nature1" class="radio-label white-font">温柔御姐</label>
+					</p>
+					<p>
+						<input type="radio" class="styled red-radio" name="character" id="nature2" value="6" />
+						<label for="nature2" class="radio-label white-font">霸气女王</label>
+					</p>
+					<p>
+						<input type="radio" class="styled red-radio" name="character" id="nature3" value="7" />
+						<label for="nature3" class="radio-label white-font">可爱萝莉</label>
+					</p>
+					<p>
+						<input type="radio" class="styled red-radio" name="character" id="nature4" value="8" />
+						<label for="nature8" class="radio-label white-font">迷一般的女子</label>
+					</p>
+				</div>
+				<div class="text-center top-offset-4 col-xs-4">
+					<input type="submit" class="cycle-button mywhite" style="color:#FF0088" id="femaleNatureButton" value="    确   定    "/>
+				</div>
+			</form>
+		</div>
+		<div id="footer" class="text-center">2 / 5</div>
+	</body>
+	{% endblock %}
+

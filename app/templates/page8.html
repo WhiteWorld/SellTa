@@ -1,0 +1,22 @@
+﻿{% extends 'include/base.html' %}
+{% block body %}
+	<body class="bg-color-female" id="page8">
+		<div class="text-center">
+			<form id="femaleSaleWordForm" method="post">
+				<div class="top-offset-4">
+					<span class="white-font">给她的甩卖词：<br/></span>
+					<span class="white-font" style="font-size:90%;margin-top:1px;">(不要超过150个字~）</span>
+				</div>
+				<div>
+					<textarea cols="30" maxlength="150" class="cycle-textarea" style="margin-top:5px;" name="words" id="words" placeholder="文字输入"></textarea>
+				</div>
+				
+				<div class="top-offset-5">
+					<input type="submit" class="cycle-button mywhite" style="color:#FF0088" id="femaleSaleWordButton" value="    确   定    "
+						onclick="return formSubmit(document.getElementById('words').value)"/>
+				</div>
+			</form>
+		</div>
+		<div id="footer" class="text-center">4 / 5</div>
+	</body>
+{% endblock %}

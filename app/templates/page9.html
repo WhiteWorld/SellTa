@@ -1,0 +1,21 @@
+﻿{% extends 'include/base.html' %}
+{% block body %}
+	<body class="bg-color-female" id="page9">
+		<div class="text-center">
+			<form id="femaleSaleWordForm" method="post">
+				<div class="top-offset-4">
+					<span class="white-font">她的微信号：</span>
+				</div>
+				<div>
+					<input type="text" class="cycle-text" style="margin-top:5px;" name="wechat" id="wechat" autofocus="autofocus" placeholder="文字输入"/>
+				</div>
+				
+				<div class="top-offset-5">
+					<input type="submit" class="cycle-button mywhite" style="color:#FF0088" id="“wechatButton" value="    生   成    "
+						onclick="return formSubmit(document.getElementById('wechat').value)"/>
+				</div>
+			</form>
+		</div>
+		<div id="footer" class="text-center">5 / 5</div>
+	</body>
+{% endblock %}

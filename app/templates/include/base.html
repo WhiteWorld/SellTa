@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en" charset="utf-8">
+	<head>
+		{% block head %}
+		<meta http-equiv="Content-Type" content="text/html"/> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<link rel="shortcut icon" href="{{ url_for('static', filename='image/logo.png') }}" />
+		<title>{% block title %}卖单身{% endblock%}</title>
+		<style type="text/css">
+			label.font-size-big {font-size:140%}
+			p.big {font-size:150%;}
+		</style>
+		<link href="{{url_for('static', filename ='css/mycss-min.css')}}" rel="stylesheet">
+		<script src="{{url_for('static', filename='js/custom-form-elements.js')}}"></script>
+	  {% endblock %}
+	  
+	</head>
+
+	{% block body %}
+	{% endblock %}
+	
+</html>

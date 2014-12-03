@@ -1,0 +1,23 @@
+﻿{% extends 'include/base.html' %}
+{% block body %}
+	<body class="bg-color-male" id="page3">
+		<div class="text-center">
+			<form id="maleAliasForm" method="post">
+				<div class="top-offset-4">
+					<span class="white-font">给他起个抽象代号：</span>
+				</div>
+				<div>
+					<span class="white-font" style="font-size:90%;" autofocus="autofocus">(不要让人一眼就猜到哟~)<br/></span>
+				</div>
+				<div>
+					<input type="text" class="cycle-text" style="margin-top:5px;" name="nickname" id="nickname" placeholder="文字输入"/>
+				</div>
+				<div class="top-offset-5">
+					<input type="submit" class="cycle-button mywhite" style="color:#FF0088" id="maleAliasButton" value="    确   定    "
+						onclick="return formSubmit(document.getElementById('nickname').value)"/>
+				</div>
+			</form>
+		</div>
+		<div id="footer" class="text-center">3 / 5</div>
+	</body>
+{% endblock %}
